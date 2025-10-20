@@ -3,6 +3,7 @@ from typing_extensions import Annotated
 
 from br_docs.validators.cert import CERTv
 from br_docs.validators.cnh import CNHv
+from br_docs.validators.cnj import CNJv
 from br_docs.validators.cnpj import CNPJv
 from br_docs.validators.cns import CNSv
 from br_docs.validators.cpf import CPFv
@@ -15,6 +16,7 @@ from br_docs.validators.sei import SEIv
 CPF = Annotated[str, AfterValidator(CPFv())]
 CNPJ = Annotated[str, AfterValidator(CNPJv())]
 CNH = Annotated[str, AfterValidator(CNHv())]
+CNJ = Annotated[str, AfterValidator(CNJv())]
 NIS = Annotated[str, AfterValidator(NISv())]
 CNS = Annotated[str, AfterValidator(CNSv())]
 RENAVAM = Annotated[str, AfterValidator(RENAVAMv())]

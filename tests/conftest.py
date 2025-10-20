@@ -87,3 +87,20 @@ def valid_sei_list():
 @pytest.fixture
 def invalid_sei_list():
     return open_docs('invalid_sei.txt')
+
+
+@pytest.fixture
+def valid_cnj_list():
+    """
+    Valid CNJ (Conselho Nacional de Justiça) process numbers
+    Format: NNNNNNN-DD.AAAA.J.TR.OOOO
+    """
+    return open_docs('valid_cnj.txt')
+
+
+@pytest.fixture
+def invalid_cnj_list():
+    """
+    Invalid CNJ numbers with incorrect check digits or formatting
+    """
+    return open_docs('invalid_cnj.txt')
